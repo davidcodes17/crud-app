@@ -12,7 +12,7 @@ const EditTopicForm = ({ id, title, description }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://dc-crud-app.vercel.app//api/topics/" + id, {
+      const response = await fetch("https://dc-crud-app.vercel.app/api/topics/" + id, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

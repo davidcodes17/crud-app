@@ -17,7 +17,7 @@ const AddTopic = () => {
     }
 
     try {
-      const response = await fetch("https://dc-crud-app.vercel.app//api/topics/", {
+      const response = await fetch("https://dc-crud-app.vercel.app/api/topics/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
