@@ -3,7 +3,7 @@ import React from "react";
 
 const getTopicById = async (id) => {
   try {
-    const response = await fetch(`https://dc-crud-app.vercel.app//api/topics/${id}`, {
+    const response = await fetch(`https://dc-crud-app.vercel.app//api/topics/?id=${id}`, {
       cache: "no-store",
     });
 
