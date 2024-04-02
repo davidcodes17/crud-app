@@ -24,7 +24,7 @@ export const GET = async () => {
   try {
     await connectMongoDB();
     const topics = await Topic.find();
-    return NextResponse.json({ topics }, { status: 200 });
+    return NextResponse.json({ topics });
   } catch (error) {
     console.error("Error fetching topics:", error);
     return NextResponse.json(
