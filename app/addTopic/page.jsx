@@ -17,19 +17,22 @@ const AddTopic = () => {
     }
 
     try {
-      const response = await fetch("https://dc-crud-app.vercel.app/api/topics/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: topic,
-          description: des,
-        }),
-      });
+      const response = await fetch(
+        "https://dc-crud-app.vercel.app/api/topics/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title: topic,
+            description: des,
+          }),
+        }
+      );
       if (response.ok) {
         router.push("/");
-        router.refresh()
+        window.location.reload();
       } else {
         throw new Error("Failed to create topic");
       }

@@ -12,7 +12,7 @@ const RemoveBtn = ({ id }) => {
       await fetch("https://dc-crud-app.vercel.app/api/topics?id=" + id, {
         method: "DELETE",
       });
-      router.refresh();
+      window.location.reload();
     }
   };
   return (
